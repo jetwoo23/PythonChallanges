@@ -1,0 +1,15 @@
+1.
+  a. code will fail
+  b. code will end as it is not an expected statement
+  b. requires the user to input Y for it to print the text
+  
+2.
+ test = input("Is it raining? y/n ")
+if test == "y" or "yes":
+    print("Oh dear, no football today!")
+    
+3.
+test = input("Is it raining? y/n ")
+if test == "y":
+    print("Oh dear, no football today!")
+else: print("Great we can play!")
