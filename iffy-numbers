@@ -1,0 +1,10 @@
+height =input('how tall are you in cm?')
+height = int(height)
+if height < 50:
+    print("lmao you are dwarf")
+
+elif height == 100:
+    print("wow you are exactly 100cm tall")
+
+elif height > 150:
+    print ("you are a giant!!!11!")
