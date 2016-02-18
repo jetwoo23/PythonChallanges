@@ -1,0 +1,4 @@
+while True:
+    fav_subject = input ('Is computer science the best subject? y/n')
+    if fav_status == "n" :
+        break
