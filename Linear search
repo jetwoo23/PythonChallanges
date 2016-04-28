@@ -1,0 +1,34 @@
+from random import randint
+
+def validate_search(searchnumber):
+    if searchnumber.isnumeric():
+        searchnumber = int(searchnumber)
+        if searchnumber>=0 and searchnumber<=9:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+searchnumber = input("Input a value from 0-9")
+if validate_search(searchnumber) == False:
+    print("The value is invalid")
+    quit()
+else: searchnumber = int(searchnumber)
+
+array = [];
+
+for i in range(0,9):
+    array.append(randint(0,9))
+
+print(array)
+
+for i in range(0, len(array)):
+    if searchnumber == array[i]:
+        print("Number exists!")
+        quit();
+
+    elif i == 8 and searchnumber != array[8]:
+        print("number does not exist")
+        quit();
+
