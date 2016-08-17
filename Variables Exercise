@@ -1,0 +1,15 @@
+x = 2
+y = 3
+a = 1
+b = 4
+
+print(a)
+print(b)
+print(x)
+print(y)
+
+c = 64
+d = 32
+
+print(c + d)
+
