@@ -1,0 +1,6 @@
+
+num = input('Give me your phone number? ')
+print('You said: ' + str(num))
+
+lang = input('what is your prefered language?')
+print('oh you prefer' + str(lang))
