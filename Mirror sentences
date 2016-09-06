@@ -1,0 +1,3 @@
+sentence = input('what do you want reversed?')
+for char in reversed( sentence ):
+  print( char, end = "" )
