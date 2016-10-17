@@ -1,0 +1,40 @@
+a = 'All '
+b = 'work '
+c = 'and '
+d = 'no '
+e = 'play '
+f = 'makes '
+g = 'Jack '
+h = 'a '
+i = 'dull '
+j = 'boy.'
+
+print(a+b+c+d+e+f+g+h+i+j)
+
+print (int(6*(1-2)))
+#the use of parenthesis changes the result of the equation
+
+bruce = 6
+print(bruce +4 )
+
+
+#question 6
+#in the last example the zero can fit into the 7 infinite times therefore causing it to cause an error
+
+startime= int(input('what is the current time(in hours)?'))
+additionaltime = int(input('how many hours to wait?'))
+
+if additionaltime > 24:
+    newtime = additionaltime-24
+
+else:
+    newtime = additionaltime
+
+if newtime+startime > 24:
+    totaltime= (newtime+startime)-24
+
+else: totaltime= newtime+startime
+
+
+print('the you need to wait until:')
+print(totaltime)
