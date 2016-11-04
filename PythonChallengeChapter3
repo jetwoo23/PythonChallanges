@@ -1,0 +1,86 @@
+import turtle
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+wn.title("Tess & Alex")
+
+tess = turtle.Turtle()       # Create tess and set some attributes
+tess.color("hotpink")
+tess.pensize(5)
+
+alex = turtle.Turtle()# Create alex
+
+bob = turtle.Turtle()
+
+jack = turtle.Turtle()
+
+bot = turtle.Turtle()
+
+bot.right(160)
+bot.forward(100)
+bot.right(-43)
+bot.forward(100)
+bot.right(270)
+bot.forward(100)
+bot.right(-97)
+bot.forward(100)
+bot.right(-43)
+bot.forward(100)
+bot.right(200)
+bot.forward(100)
+bot.right(-940)
+bot.forward(100)
+bot.right(17)
+bot.forward(100)
+bot.right(-86)
+bot.forward(100)
+
+tess.forward(80)             # Make tess draw equilateral triangle
+tess.left(120)
+tess.forward(80)
+tess.left(120)
+tess.forward(80)
+tess.left(120)               # Complete the triangle
+
+tess.right(180)              # Turn tess around
+tess.forward(80)             # Move her away from the origin
+
+alex.forward(50)             # Make alex draw a square
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+
+bob.left(60)
+bob.forward(50)
+bob.left(60)
+bob.forward(50)
+bob.left(60)
+bob.forward(50)
+bob.left(60)
+bob.forward(50)
+bob.left(60)
+bob.forward(50)
+bob.left(60)
+bob.forward(50)
+
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+jack.left(45)
+jack.forward(45)
+
+wn.mainloop()
