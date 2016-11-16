@@ -1,6 +1,6 @@
 import turtle
 
-fillcolor = "red"
+fillcolor = "blue"
 
 def draw_bar(t, height):
     """ Get turtle t to draw one bar, of height. """
@@ -24,21 +24,25 @@ wn.bgcolor("lightgreen")
 
 
 tess = turtle.Turtle()       # Create tess and set some attributes
-tess.color("blue", fillcolor)
+#tess.color("blue", fillcolor)
 tess.pensize(3)
 
 xs = [48,117,200,240,160,260,220]
 
-if xs > 200:
-    fillcolor = "red"
-elif 100<xs<200:
-    fillcolor = "yellow"
-else:
-    fillcolor = "green"
-
-
-
 for a in xs:
+
+    if a >= 200:
+        fillcolor = "red"
+        tess.color("blue", fillcolor)
+    elif 100 < a < 200:
+        fillcolor = "yellow"
+        tess.color("blue", fillcolor)
+    elif a <= 100:
+        fillcolor = "green"
+        tess.color("blue", fillcolor)
     draw_bar(tess, a)
 
 wn.mainloop()
+
+#9.when the values are negative the graph is drawn downwards and it is assigned green as it is less than 30
+#10.
