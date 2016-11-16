@@ -1,0 +1,24 @@
+import math
+
+def hypotenuse_finder(side1, side2):
+    hypot = math.sqrt(side1**2+side2**2)
+    print(hypot)
+    return hypot
+
+def is_rightangled(side1, side2, hypot):
+    #test whether side1^2 + side2^2 = hypt^2
+    if (side1**2)+(side2**2) == (round(hypot,5)**2):
+        print("your triangle has a 90 degrees angle")
+    else:
+        print("your triangle does not have a 90 degrees angle")
+
+
+side1 = int(input("what is the first side of the triangle?"))
+side2 = int(input("what is the second side of the triange?"))
+side1 = round(side1, 2)
+side2 = round(side2, 2)
+
+hypot = hypotenuse_finder(side1,side2)
+hypot = round(hypot,5)
+is_rightangled(side1, side2, hypot)
+
