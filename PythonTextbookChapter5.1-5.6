@@ -1,0 +1,52 @@
+start_day = int(input("which day did you leave?"))
+day_away = int(input("how many days were you away?"))
+days = int(day_away/7+start_day)
+day=0
+d = days
+if d==0:
+    day= 'Sunday'
+elif d==1:
+    day = 'Monday'
+elif d==2:
+    day = 'Tuesday'
+elif d==3:
+    day = 'Wednesday'
+elif d==4:
+    day = 'Thursday'
+elif d==5:
+    day = 'Friday'
+elif d==6:
+    day = 'Saturday'
+week_away= day_away/7
+print ("you will return on %s in %i weeks" %(day, week_away))
+
+#a<b
+#a<=b
+#a<=18 and day!= 3
+#a<=18 and day ==3
+
+# 3 == 3 is true
+# 3 != 3 is false
+# 3 >= 4 is false
+# not (3<4) is false
+
+# false table only FFT and FFF is true
+
+
+mark = int(input('What score did you get?'))
+grade = 0
+if mark>=75:
+    grade = "First"
+elif 70<mark<75:
+    grade = "Upper Second"
+elif 60<mark<70:
+    grade = "Second"
+elif 50<mark<60:
+    grade = "Third"
+elif 45<mark<50:
+    grade = "F1 Supp"
+elif 40<mark<45:
+    grade = "F2"
+else: grade = "F3"
+
+print("you achieved %i marks so you got %s grade" %(mark, grade))
