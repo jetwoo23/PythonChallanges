@@ -1,0 +1,72 @@
+def MakeList():
+    Monlist = []
+    with open('Monsters.txt') as i:
+        for line in i:
+            parts = line.split(",")
+            Monlist.append(parts[1])
+        for monster in Monlist:
+            print(monster)
+
+def SearchMonsterName():
+    monfound = 0
+    SearchName = input("whats the name of the monster you are looking for?")
+    with open('Monsters.txt') as i:
+        for line in i:
+            parts = line.split(",")
+            id = parts[0]
+            monname = parts [1]
+            if SearchName.upper() == monname.upper():
+                print("Monster found")
+                print("the id for "+SearchName+"is "+id)
+                monfound=1
+                break
+    if monfound == 0:
+        print("Monster Not found")
+
+def validate_number():
+    while True:
+        MyNumber = input("enter a value: ")
+        try:
+            ValidNum = int(MyNumber)
+            if 0 < ValidNum < 31:
+                break
+            else:
+                print("Enter a value from 1 - 30")
+
+        except ValueError:
+            print("Please enter a number!")
+
+    print("Number entered",ValidNum)
+    MyNumber=int(MyNumber)
+    return MyNumber;
+
+Name = input("Whats the monster's name?")
+Origin = input("Where is the monster from?")
+Description = input("Give a description of the monster: ")
+print("please enter the stats for the monster")
+print("Attack Force")
+Attack = validate_number()
+print("Magical Force")
+MagicalForce = validate_number()
+print("Magical Defence")
+MagicalDefence = validate_number()
+print("Defence")
+Defence = validate_number()
+print("Intelligence")
+Intelligence = validate_number()
+print("Health")
+Health = validate_number()
+
+print("Monster Card")
+print("\nName: ", Name)
+print("Origin: ",Origin)
+print("Description ",Description)
+print("\nAttack Force: ",Attack)
+print("Defence: ",Defence)
+print("Health: ",Health)
+print("Magical Force: ",MagicalForce)
+print("Magical Defence: ",MagicalDefence)
+print("Intelligence: ",Intelligence)
+
+MakeList()
+SearchMonsterName()
