@@ -1,0 +1,43 @@
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor("peach puff")      # Set the window background color
+wn.title("Hello, Tess!")
+tess = turtle.Turtle()
+
+
+def koch(t, order, size):
+    """
+       Make turtle t draw a Koch fractal of 'order' and 'size'.
+       Leave the turtle facing the same direction.
+    """
+    if order == 0:          # The base case is just a straight line
+        t.forward(size)
+
+    else:
+        for angle in [60, -120, 60, 0]:
+            t.forward(size)
+            koch(t, order-1, size/3)
+            t.left(angle)
+
+# def koch_0(t, size):
+#     t.forward(size)
+#
+# def koch_1(t, size):
+#     for angle in [60, -120, 60, 0]:
+#        koch_0(t, size/3)
+#        t.left(angle)
+#
+# def koch_2(t, size):
+#     for angle in [60, -120, 60, 0]:
+#        koch_1(t, size/3)
+#        t.left(angle)
+#
+# def koch_3(t, size):
+#     for angle in [60, -120, 60, 0]:
+#        koch_2(t, size/3)
+#        t.left(angle)
+
+
+koch(tess, 4, 100)
+wn.exitonclick()
