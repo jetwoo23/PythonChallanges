@@ -1,0 +1,131 @@
+# Question 1.1
+# (collect resources)input, (assemble)process, (get product)output
+# (learn stuff)input, (test)process, (get results)output
+# (input data)input, (sort and process data)process, (receive data)output
+
+#Question 1.2
+# a=input() - input
+# a = a+1 - process
+#print a - output
+
+#question 1.3
+#FlagA AND FlagB = TRUE
+#FlagB AND FlagC = TRUE
+#FlagA AND (FlagB OR FlagC) = TRUE
+#FlagB AND (NOT FlagB) = 1
+#(MyNum > 27) AND FlagC = FALSE
+#(MyNum >= 27) AND (FlagC = False) TRUE
+
+#Question 2.1
+# for count in range (1, 100):
+#     print(count)
+#
+# num  = 0
+# while num < 99:
+#     num += 1
+#     print(num)
+
+#question 2.2
+# startval = int(input('start num of the range'))
+# endval = int(input('end of range'))
+#
+# for count in range(startval, endval):
+#     print(count)
+#
+# while startval < endval:
+#     startval+= 1
+#     print(startval)
+
+#task 3.1
+#Array <- ThisISACamelCaseString
+#repeat
+# Array <- ""
+#  until Array = 10
+
+
+#task 3.2
+#Set ThisIsACamelCaseString to Array
+#Set BLANK to Array
+#If Array Less than 10
+#Set BLANK to Array UNTIL Array = 10
+
+#Task 3.3
+# ---
+
+#Task 3.4 and 3.5
+#
+# CamelCase = "ThisIsACamelCaseString"
+#
+# WordList = [x for x in CamelCase]
+#
+# for i in WordList:
+#     if i != WordList[0] and i.isupper():
+#         WordList[WordList.index(i)] = ' ' + i
+#
+# FinalList = ''.join(WordList).split(' ')
+# print(FinalList)
+
+#Task 3.6
+
+# CamelCase = input("input values")
+#
+# WordList = [x for x in CamelCase]
+#
+# for i in WordList:
+#     if i != WordList[0] and i.isupper():
+#         WordList[WordList.index(i)] = ' ' + i
+#
+# FinalList = ''.join(WordList).split(' ')
+# print(FinalList)
+
+#Task 4.1
+
+#OPEN "AttendanceLog.txt" For Input As SportsClubFile
+#Write SportsClubFile, INPUT
+#Write SportsClubFile, INPUT
+
+#Task 4.2
+#OPEN "AttendanceLog.txt" For Append As SportsClubFile
+
+#Task 4.3
+#OPEN "AttendanceLog.txt"
+#INPUT MEMBERNUM
+#IF MEMBERNUM NOT IN AttendanceLog.txt
+#   OUTPUT 'Member number not found'
+#ELSE END
+
+#Task 4.4
+import sys
+
+def write():
+    print('Creating new text file')
+
+    try:
+        file = open('AttendanceLog.txt','w')   # Trying to create a new file or open one
+        file.close()
+
+    except:
+        print('Something went wrong! Can\'t tell what?')
+        sys.exit(0) # quit Python
+
+def appendvar():
+    choice = input('append or write text files? y/n')
+    if choice == 'y':
+        with open("AttendanceLog.txt", "a") as file:
+            membernum = input("what is the member number of the leaver?")
+            attendance = input("what is the attendance of member? y/n")
+            if choice == 'y':
+                file.write(membernum+ ' - '+attendance+"\n")
+            else:
+                sys.exit(0)
+
+def optionvar():
+    decision = input("what do you want to do to the txt file? append, write or nothing")
+    if decision == 'append' or 'write':
+        appendvar()
+    else:
+        sys.exit(0)
+
+write()
+optionvar()
+
